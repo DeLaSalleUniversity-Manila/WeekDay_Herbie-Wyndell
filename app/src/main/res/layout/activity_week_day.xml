@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".WeekDayActivity"
+    android:id="@+id/frame"
+    android:clickable="true">
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:ems="10"
+        android:id="@+id/editTextMonth"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textViewSyntax"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Input Date"
+        android:id="@+id/textViewInputDate"
+        android:layout_marginTop="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:ems="10"
+        android:id="@+id/editTextDate"
+        android:layout_alignTop="@+id/editTextMonth"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:ems="10"
+        android:id="@+id/editTextYear"
+        android:layout_alignTop="@+id/editTextDate"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="/"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/editTextDate"
+        android:layout_toLeftOf="@+id/editTextDate"
+        android:layout_toStartOf="@+id/editTextDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="/"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/editTextYear"
+        android:layout_toRightOf="@+id/editTextDate"
+        android:layout_toEndOf="@+id/editTextDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mm/dd/yy"
+        android:id="@+id/textViewSyntax"
+        android:layout_below="@+id/textViewInputDate"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:id="@+id/buttonEnter"
+        android:onClick="onClickCompute"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textViewOutput"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/buttonEnter"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
